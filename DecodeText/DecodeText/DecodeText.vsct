@@ -34,7 +34,7 @@
     group; your package should define its own command set in order to avoid collisions  
     with command ids defined by other packages. -->
 
-    
+
     <!-- In this section you can define new menu groups. A menu group is a container for 
          other menus or buttons (commands); from a visual point of view you can see the 
          group as the part of a menu contained between two lines. The parent of a group 
@@ -44,24 +44,24 @@
       <Group guid="guidHtmlDecodeCmdSet" id="TopLevelGroup" priority="0xFFF0">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
       </Group>
-      
+
       <Group guid="guidHtmlDecodeCmdSet" id="SubMenuGroup" priority="0x0000">
         <Parent guid="guidHtmlDecodeCmdSet" id="SubMenu"/>
       </Group>
 
     </Groups>
-    
+
     <Menus>
       <Menu guid="guidHtmlDecodeCmdSet" id="SubMenu" priority="0x0100" type="Menu">
         <Parent guid="guidHtmlDecodeCmdSet" id="TopLevelGroup"/>
         <Strings>
           <ButtonText>DecodeText</ButtonText>
           <CommandName>Decode text</CommandName>
-        
+
         </Strings>
       </Menu>
     </Menus>
-    
+
     <!--Buttons section. -->
     <!--This section defines the elements the user can interact with, like a menu command or a button 
         or combo box in a toolbar. -->
@@ -73,7 +73,7 @@
               <CommandFlag>DefaultInvisible</CommandFlag>
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
-      
+
       <Button guid="guidHtmlDecodeCmdSet" id="cmdidDecodeHTMLCharacterEntities" priority="0x0000" type="Button">
         <Parent guid="guidHtmlDecodeCmdSet" id="SubMenuGroup"/>
         <Strings>
@@ -90,7 +90,7 @@
         </Strings>
       </Button>
 
-    </Buttons> 
+    </Buttons>
   </Commands>
 
 
@@ -100,7 +100,7 @@
   <Symbols>
     <!-- This is the package guid. -->
     <GuidSymbol name="guidHtmlDecodePkg" value="{bb4edf50-0d0a-41c8-b4b4-47865cdb2575}" />
-    
+
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidHtmlDecodeCmdSet" value="{e5006bed-f878-4b0a-a453-ace1a750fc32}">
 
@@ -112,9 +112,9 @@
       <IDSymbol name="cmdidDecodeHTMLCharacterEntities" value="0x0105" />
       <IDSymbol name="cmdidDecodeURLEscapeSequences" value="0x0110"/>
     </GuidSymbol>
-    
-    
-    
+
+
+
     <!--<GuidSymbol name="guidImages" value="{990ca988-8d01-4dac-8c2d-d85140c0f961}" >
       <IDSymbol name="bmpPic1" value="1" />
       <IDSymbol name="bmpPic2" value="2" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="bb4edf50-0d0a-41c8-b4b4-47865cdb2575" Version="1.3" Language="en-US" Publisher="Cim Ryan" />
+    <Identity Id="f6221ae6-5b3f-473a-8940-51136b8c0cb4" Version="1.3" Language="en-US" Publisher="Cim Ryan" />
     <DisplayName>DecodeText</DisplayName>
     <Description xml:space="preserve">Decode HTML- and URL-encoded text.
 
@@ -12,7 +12,7 @@ Click a menu item to replace the selected text with HTML- or URL-decoded text.</
     <Tags>html decode;url decode;htmldecode;urldecode;html;url;decode</Tags>
   </Metadata>
   <Installation InstalledByMsi="false">
-    <InstallationTarget Version="[12.0,13.0)" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,13.0)" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />

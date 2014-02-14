@@ -1,9 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodeText", "DecodeText\DecodeText.csproj", "{1195FC7C-9738-402B-B605-F307106794FE}"
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodeText", "DecodeText\DecodeText.csproj", "{07B4DE06-F14C-4530-967D-90C4ECC2C923}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1195FC7C-9738-402B-B605-F307106794FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1195FC7C-9738-402B-B605-F307106794FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1195FC7C-9738-402B-B605-F307106794FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1195FC7C-9738-402B-B605-F307106794FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B4DE06-F14C-4530-967D-90C4ECC2C923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B4DE06-F14C-4530-967D-90C4ECC2C923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B4DE06-F14C-4530-967D-90C4ECC2C923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B4DE06-F14C-4530-967D-90C4ECC2C923}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
