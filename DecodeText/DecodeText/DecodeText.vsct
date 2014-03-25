@@ -25,7 +25,7 @@
 
   <!--The Commands section is where we the commands, menus and menu groups are defined.
       This section uses a Guid to identify the package that provides the command defined inside it. -->
-  <Commands package="guidHtmlDecodePkg">
+  <Commands package="guidDecodeTextPkg">
     <!-- Inside this section we have different sub-sections: one for the menus, another  
     for the menu groups, one for the buttons (the actual commands), one for the combos 
     and the last one for the bitmaps used. Each element is identified by a command id that  
@@ -41,19 +41,19 @@
          must be a menu. -->
     <Groups>
 
-      <Group guid="guidHtmlDecodeCmdSet" id="TopLevelGroup" priority="0xFFF0">
+      <Group guid="guidDecodeTextCmdSet" id="TopLevelGroup" priority="0xFFF0">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
       </Group>
 
-      <Group guid="guidHtmlDecodeCmdSet" id="SubMenuGroup" priority="0x0000">
-        <Parent guid="guidHtmlDecodeCmdSet" id="SubMenu"/>
+      <Group guid="guidDecodeTextCmdSet" id="SubMenuGroup" priority="0x0000">
+        <Parent guid="guidDecodeTextCmdSet" id="SubMenu"/>
       </Group>
 
     </Groups>
 
     <Menus>
-      <Menu guid="guidHtmlDecodeCmdSet" id="SubMenu" priority="0x0100" type="Menu">
-        <Parent guid="guidHtmlDecodeCmdSet" id="TopLevelGroup"/>
+      <Menu guid="guidDecodeTextCmdSet" id="SubMenu" priority="0x0100" type="Menu">
+        <Parent guid="guidDecodeTextCmdSet" id="TopLevelGroup"/>
         <Strings>
           <ButtonText>DecodeText</ButtonText>
           <CommandName>Decode text</CommandName>
@@ -74,24 +74,24 @@
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
 
-      <Button guid="guidHtmlDecodeCmdSet" id="cmdidDecodeHTMLCharacterEntities" priority="0x0000" type="Button">
-        <Parent guid="guidHtmlDecodeCmdSet" id="SubMenuGroup"/>
+      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeHTMLCharacterEntities" priority="0x0000" type="Button">
+        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup"/>
         <Strings>
           <CommandName>cmdidDecodeHTMLCharacterEntities</CommandName>
           <ButtonText>Decode HTML-encoded text</ButtonText>
         </Strings>
       </Button>
 
-      <Button guid="guidHtmlDecodeCmdSet" id="cmdidDecodeURLEscapeSequences" priority="0x0001" type="Button">
-        <Parent guid="guidHtmlDecodeCmdSet" id="SubMenuGroup"/>
+      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeURLEscapeSequences" priority="0x0001" type="Button">
+        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup"/>
         <Strings>
           <CommandName>cmdidDecodeURLEscapeSequences</CommandName>
           <ButtonText>Decode URL-encoded text</ButtonText>
         </Strings>
       </Button>
 
-        <Button guid="guidHtmlDecodeCmdSet" id="cmdidDecodeCSharpEscapeSequences" priority="0x0002" type="Button">
-        <Parent guid="guidHtmlDecodeCmdSet" id="SubMenuGroup"/>
+        <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeCSharpEscapeSequences" priority="0x0002" type="Button">
+        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup"/>
         <Strings>
           <CommandName>cmdidDecodeCSharpEscapeSequences</CommandName>
           <ButtonText>Decode C# escape sequences</ButtonText>
@@ -107,10 +107,10 @@
 
   <Symbols>
     <!-- This is the package guid. -->
-    <GuidSymbol name="guidHtmlDecodePkg" value="{bb4edf50-0d0a-41c8-b4b4-47865cdb2575}" />
+    <GuidSymbol name="guidDecodeTextPkg" value="{bb4edf50-0d0a-41c8-b4b4-47865cdb2575}" />
 
     <!-- This is the guid used to group the menu commands together -->
-    <GuidSymbol name="guidHtmlDecodeCmdSet" value="{e5006bed-f878-4b0a-a453-ace1a750fc32}">
+    <GuidSymbol name="guidDecodeTextCmdSet" value="{e5006bed-f878-4b0a-a453-ace1a750fc32}">
 
       <IDSymbol name="TopLevelGroup" value="0x1020" />
       <IDSymbol name="cmdidDecodeHTMLEncodedText" value="0x0100" />
