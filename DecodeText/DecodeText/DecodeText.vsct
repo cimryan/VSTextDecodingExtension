@@ -56,7 +56,7 @@
         <Parent guid="guidDecodeTextCmdSet" id="TopLevelGroup"/>
         <Strings>
           <ButtonText>DecodeText</ButtonText>
-          <CommandName>Decode text</CommandName>
+          <CommandName>Decode selected text</CommandName>
 
         </Strings>
       </Menu>
