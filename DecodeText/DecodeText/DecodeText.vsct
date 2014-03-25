@@ -90,6 +90,14 @@
         </Strings>
       </Button>
 
+        <Button guid="guidHtmlDecodeCmdSet" id="cmdidDecodeCSharpEscapeSequences" priority="0x0002" type="Button">
+        <Parent guid="guidHtmlDecodeCmdSet" id="SubMenuGroup"/>
+        <Strings>
+          <CommandName>cmdidDecodeCSharpEscapeSequences</CommandName>
+          <ButtonText>Decode C# escape sequences</ButtonText>
+        </Strings>
+      </Button>
+    
     </Buttons>
   </Commands>
 
@@ -111,6 +119,7 @@
       <IDSymbol name="SubMenuGroup" value="0x1100" />
       <IDSymbol name="cmdidDecodeHTMLCharacterEntities" value="0x0105" />
       <IDSymbol name="cmdidDecodeURLEscapeSequences" value="0x0110"/>
+      <IDSymbol name="cmdidDecodeCSharpEscapeSequences" value="0x0115"/>
     </GuidSymbol>
 
 

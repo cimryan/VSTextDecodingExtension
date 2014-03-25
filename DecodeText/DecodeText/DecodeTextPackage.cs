@@ -6,6 +6,7 @@ using System.ComponentModel.Design;
 using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace DecodeText
 {
@@ -75,6 +76,13 @@ namespace DecodeText
                         new CommandID(
                             GuidList.guidDecodeTextCmdSet,
                             (int)PkgCmdIDList.cmdidDecodeURLEscapeSequences)));
+
+                mcs.AddCommand(
+                    new MenuCommand(
+                        HandleDecodeCSharpMenuItemEvent,
+                        new CommandID(
+                            GuidList.guidDecodeTextCmdSet,
+                            (int)PkgCmdIDList.cmdidDecodeCSharpEscapeSequences)));
             }
         }
         #endregion
@@ -92,6 +100,11 @@ namespace DecodeText
         void HandleDecodeURLMenuItemEvent(object x, EventArgs y)
         {
             ReplaceSelectedText(System.Net.WebUtility.UrlDecode);
+        }
+
+        void HandleDecodeCSharpMenuItemEvent(object x, EventArgs y)
+        {
+            ReplaceSelectedText(TextDecoding.DecodeCSharpEncodedString);
         }
 
         void ReplaceSelectedText(

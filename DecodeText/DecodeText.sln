@@ -3,6 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodeText", "DecodeText\DecodeText.csproj", "{07B4DE06-F14C-4530-967D-90C4ECC2C923}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{65D8374B-4F61-4BBA-9223-BBE8D081C24E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodeTextUnitTests", "DecodeTextUnitTests\DecodeTextUnitTests.csproj", "{678BF1FB-A922-4BF3-AD93-AB593E2E2F20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +20,10 @@ Global
 		{07B4DE06-F14C-4530-967D-90C4ECC2C923}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07B4DE06-F14C-4530-967D-90C4ECC2C923}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07B4DE06-F14C-4530-967D-90C4ECC2C923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{678BF1FB-A922-4BF3-AD93-AB593E2E2F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{678BF1FB-A922-4BF3-AD93-AB593E2E2F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{678BF1FB-A922-4BF3-AD93-AB593E2E2F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{678BF1FB-A922-4BF3-AD93-AB593E2E2F20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
