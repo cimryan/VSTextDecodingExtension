@@ -29,8 +29,8 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("1.3.0.0")]
-[assembly: AssemblyFileVersion("1.3.0.0")]
+[assembly: AssemblyVersion("1.4.0.0")]
+[assembly: AssemblyFileVersion("1.4.0.0")]
 
 [assembly: InternalsVisibleTo("DecodeTextUnitTests, PublicKey=00240000048000009400000006020000002400005253" +
     "41310004000001000100efe9ce3a8aa6c9dce6c0c29b45e40ef569b50711cdb3af1657ff695f4635d13524783bcd48ae004cd" + 
