@@ -74,7 +74,15 @@
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
 
-      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeHTMLCharacterEntities" priority="0x0000" type="Button">
+      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeCSharpEscapeSequences" priority="0x0000" type="Button">
+        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup"/>
+        <Strings>
+          <CommandName>cmdidDecodeCSharpEscapeSequences</CommandName>
+          <ButtonText>Decode C# escape sequences</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeHTMLCharacterEntities" priority="0x0001" type="Button">
         <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup"/>
         <Strings>
           <CommandName>cmdidDecodeHTMLCharacterEntities</CommandName>
@@ -82,22 +90,14 @@
         </Strings>
       </Button>
 
-      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeURLEscapeSequences" priority="0x0001" type="Button">
+      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeURLEscapeSequences" priority="0x0002" type="Button">
         <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup"/>
         <Strings>
           <CommandName>cmdidDecodeURLEscapeSequences</CommandName>
           <ButtonText>Decode URL-encoded text</ButtonText>
         </Strings>
       </Button>
-
-        <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeCSharpEscapeSequences" priority="0x0002" type="Button">
-        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup"/>
-        <Strings>
-          <CommandName>cmdidDecodeCSharpEscapeSequences</CommandName>
-          <ButtonText>Decode C# escape sequences</ButtonText>
-        </Strings>
-      </Button>
-    
+      
     </Buttons>
   </Commands>
 
@@ -117,9 +117,9 @@
 
       <IDSymbol name="SubMenu" value="0x1050"/>
       <IDSymbol name="SubMenuGroup" value="0x1100" />
+      <IDSymbol name="cmdidDecodeCSharpEscapeSequences" value="0x0104"/>
       <IDSymbol name="cmdidDecodeHTMLCharacterEntities" value="0x0105" />
       <IDSymbol name="cmdidDecodeURLEscapeSequences" value="0x0110"/>
-      <IDSymbol name="cmdidDecodeCSharpEscapeSequences" value="0x0115"/>
     </GuidSymbol>
 
 

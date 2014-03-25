@@ -65,6 +65,13 @@ namespace DecodeText
             {
                 mcs.AddCommand(
                     new MenuCommand(
+                        HandleDecodeCSharpMenuItemEvent,
+                        new CommandID(
+                            GuidList.guidDecodeTextCmdSet,
+                            (int)PkgCmdIDList.cmdidDecodeCSharpEscapeSequences)));
+
+                mcs.AddCommand(
+                    new MenuCommand(
                         HandleDecodeHTMLMenuItemEvent,
                         new CommandID(
                             GuidList.guidDecodeTextCmdSet,
@@ -76,13 +83,6 @@ namespace DecodeText
                         new CommandID(
                             GuidList.guidDecodeTextCmdSet,
                             (int)PkgCmdIDList.cmdidDecodeURLEscapeSequences)));
-
-                mcs.AddCommand(
-                    new MenuCommand(
-                        HandleDecodeCSharpMenuItemEvent,
-                        new CommandID(
-                            GuidList.guidDecodeTextCmdSet,
-                            (int)PkgCmdIDList.cmdidDecodeCSharpEscapeSequences)));
             }
         }
         #endregion
