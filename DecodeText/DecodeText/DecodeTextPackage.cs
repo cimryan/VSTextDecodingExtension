@@ -83,6 +83,27 @@ namespace DecodeText
                         new CommandID(
                             GuidList.guidDecodeTextCmdSet,
                             (int)PkgCmdIDList.cmdidDecodeURLEscapeSequences)));
+
+                mcs.AddCommand(
+                    new MenuCommand(
+                        HandleDecodeCSharpOnClipboardMenuItemEvent,
+                        new CommandID(
+                            GuidList.guidDecodeTextCmdSet,
+                            (int)PkgCmdIDList.cmdidDecodeCSharpEscapeSequencesOnClipboard)));
+
+                mcs.AddCommand(
+                    new MenuCommand(
+                        HandleDecodeHTMLOnClipboardMenuItemEvent,
+                        new CommandID(
+                            GuidList.guidDecodeTextCmdSet,
+                            (int)PkgCmdIDList.cmdidDecodeHTMLCharacterEntitiesOnClipboard)));
+
+                mcs.AddCommand(
+                    new MenuCommand(
+                        HandleDecodeURLOnClipboardMenuItemEvent,
+                        new CommandID(
+                            GuidList.guidDecodeTextCmdSet,
+                            (int)PkgCmdIDList.cmdidDecodeURLEscapeSequencesOnClipboard)));
             }
         }
         #endregion
@@ -92,7 +113,7 @@ namespace DecodeText
         /// See the Initialize method to see how the menu item is associated to this function using
         /// the OleMenuCommandService service and the MenuCommand class.
         /// </summary>
-        void HandleDecodeHTMLMenuItemEvent(object sender, EventArgs e)
+        void HandleDecodeHTMLMenuItemEvent(object x, EventArgs y)
         {
             ReplaceSelectedText(System.Net.WebUtility.HtmlDecode);
         }
@@ -105,6 +126,27 @@ namespace DecodeText
         void HandleDecodeCSharpMenuItemEvent(object x, EventArgs y)
         {
             ReplaceSelectedText(TextDecoding.DecodeCSharpEncodedString);
+        }
+
+        void HandleDecodeHTMLOnClipboardMenuItemEvent(object x, EventArgs y)
+        {
+            System.Windows.Clipboard.SetText(
+                System.Net.WebUtility.HtmlDecode(
+                    System.Windows.Clipboard.GetText()));
+        }
+
+        void HandleDecodeURLOnClipboardMenuItemEvent(object x, EventArgs y)
+        {
+            System.Windows.Clipboard.SetText(
+                System.Net.WebUtility.UrlDecode(
+                    System.Windows.Clipboard.GetText()));
+        }
+
+        void HandleDecodeCSharpOnClipboardMenuItemEvent(object x, EventArgs y)
+        {
+            System.Windows.Clipboard.SetText(
+                TextDecoding.DecodeCSharpEncodedString(
+                    System.Windows.Clipboard.GetText()));
         }
 
         void ReplaceSelectedText(
