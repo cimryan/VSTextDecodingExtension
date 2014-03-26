@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="f6221ae6-5b3f-473a-8940-51136b8c0cb4" Version="1.4" Language="en-US" Publisher="Cim Ryan" />
+    <Identity Id="f6221ae6-5b3f-473a-8940-51136b8c0cb4" Version="1.5" Language="en-US" Publisher="Cim Ryan" />
     <DisplayName>DecodeText</DisplayName>
     <Description xml:space="preserve">Decode HTML- and URL-encoded text, and C# escape sequences.
 
