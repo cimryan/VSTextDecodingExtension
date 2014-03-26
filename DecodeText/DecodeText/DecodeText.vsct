@@ -20,9 +20,6 @@
   <!--This header contains the command ids for the menus provided by the shell. -->
   <Extern href="vsshlids.h"/>
 
-
-
-
   <!--The Commands section is where we the commands, menus and menu groups are defined.
       This section uses a Guid to identify the package that provides the command defined inside it. -->
   <Commands package="guidDecodeTextPkg">
@@ -45,11 +42,11 @@
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
       </Group>
 
-      <Group guid="guidDecodeTextCmdSet" id="SubMenuGroup" priority="0x0000">
-        <Parent guid="guidDecodeTextCmdSet" id="SubMenu"/>
+      <Group guid="guidDecodeTextCmdSet" id="DecodeSelectedTextMenuGroup" priority="0x0000">
+        <Parent guid="guidDecodeTextCmdSet" id="DecodeSelectedTextSubMenu"/>
       </Group>
 
-      <Group guid="guidDecodeTextCmdSet" id="SubMenuGroup2" priority="0x0001">
+      <Group guid="guidDecodeTextCmdSet" id="DecodeClipboardTextMenuGroup" priority="0x0000">
         <Parent guid="guidDecodeTextCmdSet" id="DecodeClipboardTextSubMenu"/>
       </Group>
 
@@ -65,7 +62,7 @@
         </Strings>
       </Menu>
 
-      <Menu guid="guidDecodeTextCmdSet" id="SubMenu" priority="0x0101" type="Menu">
+      <Menu guid="guidDecodeTextCmdSet" id="DecodeSelectedTextSubMenu" priority="0x0101" type="Menu">
         <Parent guid="guidDecodeTextCmdSet" id="TopLevelGroup"/>
         <Strings>
           <ButtonText>DecodeText</ButtonText>
@@ -73,7 +70,6 @@
         </Strings>
       </Menu>
 
-    
     </Menus>
 
     <!--Buttons section. -->
@@ -87,34 +83,9 @@
               <CommandFlag>DefaultInvisible</CommandFlag>
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
-
-      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeCSharpEscapeSequences" priority="0x0000" type="Button">
-        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup"/>
-        <Strings>
-          <CommandName>cmdidDecodeCSharpEscapeSequences</CommandName>
-          <ButtonText>Decode C# escape sequences</ButtonText>
-        </Strings>
-      </Button>
-
-      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeHTMLCharacterEntities" priority="0x0001" type="Button">
-        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup"/>
-        <Strings>
-          <CommandName>cmdidDecodeHTMLCharacterEntities</CommandName>
-          <ButtonText>Decode HTML-encoded text</ButtonText>
-        </Strings>
-      </Button>
-
-      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeURLEscapeSequences" priority="0x0002" type="Button">
-        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup"/>
-        <Strings>
-          <CommandName>cmdidDecodeURLEscapeSequences</CommandName>
-          <ButtonText>Decode URL-encoded text</ButtonText>
-        </Strings>
-      </Button>
-
       
       <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeCSharpEscapeSequencesOnClipboard" priority="0x0000" type="Button">
-        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup2"/>
+        <Parent guid="guidDecodeTextCmdSet" id="DecodeClipboardTextMenuGroup"/>
         <Strings>
           <CommandName>cmdidDecodeCSharpEscapeSequencesOnClipboard</CommandName>
           <ButtonText>Decode C# escape sequences</ButtonText>
@@ -122,7 +93,7 @@
       </Button>
 
       <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeHTMLCharacterEntitiesOnClipboard" priority="0x0001" type="Button">
-        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup2"/>
+        <Parent guid="guidDecodeTextCmdSet" id="DecodeClipboardTextMenuGroup"/>
         <Strings>
           <CommandName>cmdidDecodeHTMLCharacterEntitiesOnClipboard</CommandName>
           <ButtonText>Decode HTML-encoded text</ButtonText>
@@ -130,21 +101,40 @@
       </Button>
 
       <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeURLEscapeSequencesOnClipboard" priority="0x0002" type="Button">
-        <Parent guid="guidDecodeTextCmdSet" id="SubMenuGroup2"/>
+        <Parent guid="guidDecodeTextCmdSet" id="DecodeClipboardTextMenuGroup"/>
         <Strings>
           <CommandName>cmdidDecodeURLEscapeSequencesOnClipboard</CommandName>
           <ButtonText>Decode URL-encoded text</ButtonText>
         </Strings>
       </Button>
 
-  
-  
+      
+      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeCSharpEscapeSequencesSelected" priority="0x0000" type="Button">
+        <Parent guid="guidDecodeTextCmdSet" id="DecodeSelectedTextMenuGroup"/>
+        <Strings>
+          <CommandName>cmdidDecodeCSharpEscapeSequencesSelected</CommandName>
+          <ButtonText>Decode C# escape sequences</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeHTMLCharacterEntitiesSelected" priority="0x0001" type="Button">
+        <Parent guid="guidDecodeTextCmdSet" id="DecodeSelectedTextMenuGroup"/>
+        <Strings>
+          <CommandName>cmdidDecodeHTMLCharacterEntitiesSelected</CommandName>
+          <ButtonText>Decode HTML-encoded text</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidDecodeTextCmdSet" id="cmdidDecodeURLEscapeSequencesSelected" priority="0x0002" type="Button">
+        <Parent guid="guidDecodeTextCmdSet" id="DecodeSelectedTextMenuGroup"/>
+        <Strings>
+          <CommandName>cmdidDecodeURLEscapeSequencesSelected</CommandName>
+          <ButtonText>Decode URL-encoded text</ButtonText>
+        </Strings>
+      </Button>
+    
     </Buttons>
   </Commands>
-
-
-
-
 
   <Symbols>
     <!-- This is the package guid. -->
@@ -156,19 +146,19 @@
       <IDSymbol name="TopLevelGroup" value="0x1020" />
       <IDSymbol name="cmdidDecodeHTMLEncodedText" value="0x0100" />
 
-      <IDSymbol name="SubMenu" value="0x1050"/>
+      <IDSymbol name="DecodeSelectedTextSubMenu" value="0x1050"/>
       <IDSymbol name="DecodeClipboardTextSubMenu" value="0x1060"/>
 
-      <IDSymbol name="SubMenuGroup" value="0x1100" />
-      <IDSymbol name="SubMenuGroup2" value="0x1110" />
+      <IDSymbol name="DecodeSelectedTextMenuGroup" value="0x1100" />
+      <IDSymbol name="DecodeClipboardTextMenuGroup" value="0x1110" />
       
-      <IDSymbol name="cmdidDecodeCSharpEscapeSequences" value="0x0104"/>
-      <IDSymbol name="cmdidDecodeHTMLCharacterEntities" value="0x0105" />
-      <IDSymbol name="cmdidDecodeURLEscapeSequences" value="0x0110"/>
+      <IDSymbol name="cmdidDecodeCSharpEscapeSequencesSelected" value="0x0110"/>
+      <IDSymbol name="cmdidDecodeHTMLCharacterEntitiesSelected" value="0x0120" />
+      <IDSymbol name="cmdidDecodeURLEscapeSequencesSelected" value="0x0130"/>
     
-      <IDSymbol name="cmdidDecodeCSharpEscapeSequencesOnClipboard" value="0x0120"/>
-      <IDSymbol name="cmdidDecodeHTMLCharacterEntitiesOnClipboard" value="0x0125" />
-      <IDSymbol name="cmdidDecodeURLEscapeSequencesOnClipboard" value="0x0130"/>
+      <IDSymbol name="cmdidDecodeCSharpEscapeSequencesOnClipboard" value="0x0140"/>
+      <IDSymbol name="cmdidDecodeHTMLCharacterEntitiesOnClipboard" value="0x0150" />
+      <IDSymbol name="cmdidDecodeURLEscapeSequencesOnClipboard" value="0x0160"/>
     </GuidSymbol>
 
   </Symbols>

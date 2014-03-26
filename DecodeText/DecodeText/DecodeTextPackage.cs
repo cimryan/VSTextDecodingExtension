@@ -68,21 +68,21 @@ namespace DecodeText
                         HandleDecodeCSharpMenuItemEvent,
                         new CommandID(
                             GuidList.guidDecodeTextCmdSet,
-                            (int)PkgCmdIDList.cmdidDecodeCSharpEscapeSequences)));
+                            (int)PkgCmdIDList.cmdidDecodeCSharpEscapeSequencesSelected)));
 
                 mcs.AddCommand(
                     new MenuCommand(
                         HandleDecodeHTMLMenuItemEvent,
                         new CommandID(
                             GuidList.guidDecodeTextCmdSet,
-                            (int)PkgCmdIDList.cmdidDecodeHTMLCharacterEntities)));
+                            (int)PkgCmdIDList.cmdidDecodeHTMLCharacterEntitiesSelected)));
 
                 mcs.AddCommand(
                     new MenuCommand(
                         HandleDecodeURLMenuItemEvent,
                         new CommandID(
                             GuidList.guidDecodeTextCmdSet,
-                            (int)PkgCmdIDList.cmdidDecodeURLEscapeSequences)));
+                            (int)PkgCmdIDList.cmdidDecodeURLEscapeSequencesSelected)));
 
                 mcs.AddCommand(
                     new MenuCommand(

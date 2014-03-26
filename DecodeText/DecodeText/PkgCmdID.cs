@@ -6,13 +6,13 @@ namespace DecodeText
 {
     static class PkgCmdIDList
     {
-        public const uint cmdidDecodeCSharpEscapeSequences = 0x104;
-        public const uint cmdidDecodeHTMLCharacterEntities = 0x105;
-        public const uint cmdidDecodeURLEscapeSequences = 0x110;
+        public const uint cmdidDecodeCSharpEscapeSequencesSelected = 0x110;
+        public const uint cmdidDecodeHTMLCharacterEntitiesSelected = 0x120;
+        public const uint cmdidDecodeURLEscapeSequencesSelected = 0x130;
 
-        public const uint cmdidDecodeCSharpEscapeSequencesOnClipboard = 0x120;
-        public const uint cmdidDecodeHTMLCharacterEntitiesOnClipboard = 0x125;
-        public const uint cmdidDecodeURLEscapeSequencesOnClipboard = 0x130;
+        public const uint cmdidDecodeCSharpEscapeSequencesOnClipboard = 0x140;
+        public const uint cmdidDecodeHTMLCharacterEntitiesOnClipboard = 0x150;
+        public const uint cmdidDecodeURLEscapeSequencesOnClipboard = 0x160;
 
     };
 }
